@@ -74,26 +74,25 @@ export default function CartList() {
                       primary={item.title}
                       secondary={secondary ? "Secondary text" : null}
                     />
-                    <ListItemButton>
-                      <Button
-                        type="button"
-                        onClick={() => {
-                          deleteItem(item);
-                        }}
-                      >
-                        Decrease
-                      </Button>
-                    </ListItemButton>
-                    <ListItemButton>
-                      <Button
-                        type="button"
-                        onClick={() => {
-                          addItem(item);
-                        }}
-                      >
-                        Increase
-                      </Button>
-                    </ListItemButton>
+
+                    <Button
+                      type="button"
+                      onClick={() => {
+                        addItem(item);
+                      }}
+                    >
+                      Increase
+                    </Button>
+
+                    <Button
+                      type="button"
+                      onClick={() => {
+                        deleteItem(item);
+                      }}
+                    >
+                      Decrease
+                    </Button>
+
                     <Typography>{item.amount}</Typography>
                   </ListItem>
                 ))
